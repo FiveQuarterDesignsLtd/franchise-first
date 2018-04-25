@@ -17,18 +17,25 @@
 <body>
 	<header>
 		<div class="container">
-			<div class="d-flex justify-content-center">
+			<div class="d-flex justify-content-center logo">
 				<img src="img/franchise-futures-logo@2x.png" alt="Franchise Futures - Helping you move forward">
 			</div>
 		</div>
 	</header>
 	<section class="content">
-		<div class="container">
-			<h1 class="text-center">Website coming soon...</h1>
-			<h2 class="text-center">In the meantime, if you’d like to get in touch<br class="hide"> please submit an enquiry using the form below</h2>
+		<div class="container-fluid nopadding d-flex justify-content-center align-items-center">
+      <div class="col-md-5 nopadding">
+        <img src="img/krish.jpg" alt="Krishma Vaghela" class="img-fluid profile-pic">
+      </div>
+      <div class="col-md-7 ">
+        <div class="typewriter">
+          <h1 class="text-center">Website coming soon...</h1>
+        </div>
+        <!-- <h2 class="text-center">In the meantime, if you’d like to get in touch<br class="hide"> please submit an enquiry using the form below</h2> -->
+      </div>
 		</div>
 	</section>
-	<section class="enquiry">
+	<!-- <section class="enquiry">
 		<div class="container d-flex justify-content-center">
 			<div class="enquiry-form">
 				<form method="post" action="thank-you.php" name="enquiry-form">
@@ -79,7 +86,7 @@
 				</form>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<footer>
 		<div class="container">

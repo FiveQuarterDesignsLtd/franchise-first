@@ -9,148 +9,245 @@ Text Domain: fanchisefutures
 */
 /* COLOUR */
 /* FONTS */
+/* ANIMATIONS */
+@keyframes header {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 290px;
+  }
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes krish {
+  0% {
+    opacity: 0;
+    margin-left: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00C1DE;
+  }
+}
+
+/* GENERAL */
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 /* HEADER */
-/* line 34, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-header img {
+header {
+  background: #E0F8FB;
+  animation: header 2s ease-in-out forwards 1;
+}
+
+header .logo img {
+  opacity: 0;
   margin: auto;
-  width: 290px; }
+  width: 290px;
+  animation: logo 1.5s ease-out forwards 1;
+  animation-delay: 1.5s;
+}
 
 /* CONTENT */
-/* line 42, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
 .content {
   font-family: "mr-eaves-sans", sans-serif;
   font-style: normal;
-  font-weight: 200; }
-  /* line 44, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-  .content h1 {
-    font-size: 38px;
-    color: #00C1DE; }
-  /* line 48, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-  .content h2 {
-    font-size: 28px;
-    color: #4A4A4A; }
+  font-weight: 200;
+}
+
+.content .profile-pic {
+  opacity: 0;
+  animation: krish 1.5s ease-out forwards 1;
+  animation-delay: 2s;
+}
+
+.content .typewriter h1 {
+  font-size: 38px;
+  color: #00C1DE;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  /* Adjust as needed */
+  animation: typing 3.5s steps(30, end) forwards, blink-caret 0.5s step-end infinite;
+  animation-delay: 3s;
+}
 
 /* ENQUIRY FORM */
-/* line 56, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
 .enquiry {
-  margin-top: 50px;
   background-color: #E0F8FB;
   padding: 30px 0;
   font-family: "mr-eaves-sans", sans-serif;
   font-style: normal;
-  font-weight: 200; }
-  /* line 61, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-  .enquiry .enquiry-form {
-    width: 45%;
-    transition: ease 0.5s all; }
-    /* line 65, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    .enquiry .enquiry-form input::-webkit-input-placeholder, .enquiry .enquiry-form textarea::-webkit-input-placeholder {
-      /* Chrome/Opera/Safari */
-      color: black; }
-    /* line 69, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    .enquiry .enquiry-form input::-moz-placeholder, .enquiry .enquiry-form textarea::-moz-placeholder {
-      /* Firefox 19+ */
-      color: black; }
-    /* line 73, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    .enquiry .enquiry-form input:-ms-input-placeholder, .enquiry .enquiry-form textarea:-ms-input-placeholder {
-      /* IE 10+ */
-      color: black; }
-    /* line 77, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    .enquiry .enquiry-form input:-moz-placeholder, .enquiry .enquiry-form textarea:-moz-placeholder {
-      /* Firefox 18- */
-      color: black; }
-    /* line 82, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    .enquiry .enquiry-form .form-control {
-      border-radius: 0;
-      border: 0;
-      font-size: 22px;
-      color: black; }
-    /* line 88, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    .enquiry .enquiry-form .custom-dropdown {
-      position: relative;
-      display: block;
-      vertical-align: middle; }
-      /* line 92, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-      .enquiry .enquiry-form .custom-dropdown::before {
-        content: "";
-        position: absolute;
-        pointer-events: none;
-        width: 2em;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        border-radius: 0 3px 3px 0; }
-      /* line 102, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-      .enquiry .enquiry-form .custom-dropdown::after {
-        content: "";
-        position: absolute;
-        pointer-events: none;
-        content: "\25BC";
-        height: 1em;
-        font-size: .625em;
-        line-height: 1;
-        right: 1.2em;
-        top: 50%;
-        margin-top: -.5em; }
-      /* line 114, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-      .enquiry .enquiry-form .custom-dropdown select {
-        color: black;
-        font-size: 22px;
-        padding: 0;
-        padding-left: 13px;
-        border: 0;
-        margin: 0;
-        border-radius: 0;
-        text-indent: 0.01px;
-        text-overflow: '';
-        -webkit-appearance: button; }
-    /* line 127, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    .enquiry .enquiry-form .error {
-      color: red; }
-    /* line 130, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    .enquiry .enquiry-form .btn-ff {
-      background-color: #00C1DE;
-      border-radius: 0;
-      color: white; }
-      /* line 134, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-      .enquiry .enquiry-form .btn-ff:hover {
-        background-color: #00abc5; }
+  font-weight: 200;
+}
+
+.enquiry .enquiry-form {
+  width: 45%;
+  transition: ease 0.5s all;
+}
+
+.enquiry .enquiry-form input::-webkit-input-placeholder,
+.enquiry .enquiry-form textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: black;
+}
+
+.enquiry .enquiry-form input::-moz-placeholder,
+.enquiry .enquiry-form textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: black;
+}
+
+.enquiry .enquiry-form input:-ms-input-placeholder,
+.enquiry .enquiry-form textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: black;
+}
+
+.enquiry .enquiry-form input:-moz-placeholder,
+.enquiry .enquiry-form textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: black;
+}
+
+.enquiry .enquiry-form .form-control {
+  border-radius: 0;
+  border: 0;
+  font-size: 22px;
+  color: black;
+}
+
+.enquiry .enquiry-form .custom-dropdown {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+}
+
+.enquiry .enquiry-form .custom-dropdown::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.enquiry .enquiry-form .custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.enquiry .enquiry-form .custom-dropdown select {
+  color: black;
+  font-size: 22px;
+  padding: 0;
+  padding-left: 13px;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button;
+}
+
+.enquiry .enquiry-form .error {
+  color: red;
+}
+
+.enquiry .enquiry-form .btn-ff {
+  background-color: #00C1DE;
+  border-radius: 0;
+  color: white;
+}
+
+.enquiry .enquiry-form .btn-ff:hover {
+  background-color: #00abc5;
+}
 
 /* FOOTER */
-/* line 144, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
 footer {
   padding: 30px 0;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 22px;
-  color: #4A4A4A; }
-  /* line 150, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-  footer p a {
-    color: #4A4A4A;
-    text-decoration: none; }
-    /* line 153, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
-    footer p a:hover {
-      color: #4A4A4A;
-      text-decoration: none; }
+  color: #4A4A4A;
+}
+
+footer p a {
+  color: #4A4A4A;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #4A4A4A;
+  text-decoration: none;
+}
 
 /* MOBILE */
 @media (max-width: 991.98px) {
-  /* line 164, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
   .enquiry .enquiry-form {
-    width: 60%; } }
+    width: 60%;
+  }
+}
 
 @media (max-width: 767.98px) {
-  /* line 171, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
   .enquiry .enquiry-form {
-    width: 80%; } }
+    width: 80%;
+  }
+}
 
 @media (max-width: 575.98px) {
-  /* line 178, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
   .content .hide {
-    display: none; }
-  /* line 183, /Applications/MAMP/htdocs/franchise-futures-landing-page/css/style.scss */
+    display: none;
+  }
   .enquiry .enquiry-form {
-    width: 90%; } }
-
-/*# sourceMappingURL=style.css.map */
+    width: 90%;
+  }
+}
